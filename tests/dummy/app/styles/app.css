@@ -1,0 +1,13 @@
+.custom-container {
+  width: 70%;
+}
+
+.custom {
+  background: green;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 6px;
+}

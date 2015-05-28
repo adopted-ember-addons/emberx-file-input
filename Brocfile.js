@@ -5,6 +5,8 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 var app = new EmberAddon();
 
+app.import('vendor/style.css');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

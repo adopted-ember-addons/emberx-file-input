@@ -1,0 +1,27 @@
+.x-file {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.x-file > * {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.x-file--input{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  filter: alpha(opacity=0);
+  /*opacity: 0; commented out for testing*/
+  outline: none;
+  background: rgba(255, 0, 0, 0.33); /*Added opaque background for testing*/
+  cursor: inherit;
+  display: block;
+  font-size: inherit;
+}
+
