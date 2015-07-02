@@ -1,10 +1,12 @@
 /* jshint expr:true */
 import {
   describe,
-  it,
+  it
+} from 'mocha';
+import {
   beforeEach,
   afterEach
-} from 'mocha';
+} from '../test-helper';
 import { expect } from 'chai';
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
@@ -40,7 +42,15 @@ describe('Acceptance: XFileInput', function() {
     expect(this.component.$('input[type=file]')).to.have.attr('tabindex', '0');
   });
 
-  describe('Bound Attributes', function(){
+  it('has aria-hidden around its content', function() {
+    expect(this.component.$('.spec-file-input__content')).to.have.attr('aria-hidden', 'true');
+  });
+
+  it('has contains its yielded content', function() {
+    expect(this.component.$('.spec-file-input__content :contains("Shall you upload?")')).not.to.be.empty;
+  });
+
+  describe('Bound Attributes', function() {
     beforeEach(function(){
       this.component.setProperties({
         disabled: true,
@@ -49,10 +59,21 @@ describe('Acceptance: XFileInput', function() {
       });
     });
 
-    it('binds disabled attribute on the native file input');
-    it('binds the disabled css class on the whole component');
-    it('binds the multiple attribute on the native file input');
-    it('binds the tabindex attribut on the native file input');
+    it('binds disabled attribute on the native file input', function() {
+      expect(this.component.$('input[type=file]')).not.to.be.enabled;
+    });
+
+    it('binds the disabled css class on the whole component', function() {
+      expect(this.component.$()).to.have.class('x-file-input--disabled');
+    });
+
+    it('binds the multiple attribute on the native file input', function() {
+      expect(this.component.$('input[type=file]')).to.have.attr('multiple');
+    });
+
+    it('binds the tabindex attribut on the native file input', function() {
+      expect(this.component.$('input[type=file]')).to.have.attr('name', 'taco-cat');
+    });
   });
 });
 
@@ -61,7 +82,6 @@ function getComponentById(id) {
   if (registry) {
     return registry[id];
   } else {
-    console.log(Ember.View.views);
     return Ember.View.views[id];
   }
 }
