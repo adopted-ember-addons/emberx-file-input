@@ -1,4 +1,4 @@
-# X-files
+# emberx-file-input
 
 This README outlines the details of collaborating on this Ember addon.
 

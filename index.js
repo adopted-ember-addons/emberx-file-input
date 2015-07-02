@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'x-files',
+  name: 'emberx-file-input',
   included: function(app) {
     this._super.included(app);
 
