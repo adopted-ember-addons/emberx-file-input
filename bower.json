@@ -1,5 +1,5 @@
 {
-  "name": "x-file-select",
+  "name": "emberx-file-input",
   "dependencies": {
     "ember": "1.11.1",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
@@ -9,5 +9,8 @@
     "jquery": "^1.11.1",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "ember-mocha": "~0.7.0"
+  },
+  "devDependencies": {
+    "chai-jquery": "~2.0.0"
   }
 }

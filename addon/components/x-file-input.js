@@ -1,10 +1,11 @@
 import Ember from 'ember';
-import layout from '../templates/components/x-files';
+import layout from '../templates/components/x-file-input';
 
 export default Ember.Component.extend({
-  classNameBindings: [':x-file'],
+  classNameBindings: [':x-file-input', 'disabled:x-file-input--disabled'],
   tagName: 'span',
   layout: layout,
+  tabindex: 0,
 
   /**
    * Listens for change events on the native file input and dispatches

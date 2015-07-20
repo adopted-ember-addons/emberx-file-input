@@ -7,6 +7,8 @@ var app = new EmberAddon();
 
 app.import('vendor/style.css');
 
+app.import('bower_components/chai-jquery/chai-jquery.js', {type: 'test'});
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
