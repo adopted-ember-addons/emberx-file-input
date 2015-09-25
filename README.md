@@ -52,12 +52,12 @@ Instead of that boring old stock file selector, your users will see
 this:
 
 <div style="position: relative; display: inline-block;">
-<img style="pointer-events: none; display: block; border-radius: 10px;" src="http://i.imgur.com/Mj0xj.jpg" alt="I should buy a boat"/>
-<input type="file" name="files" alt="Choose a File" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 1;"/>
+  <img style="pointer-events: none; display: block; border-radius: 10px;" src="http://i.imgur.com/Mj0xj.jpg" alt="I should buy a boat"/>
+  <input type="file" name="files" alt="Choose a File" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 1;"/>
 </div>
 
-And don't worry, that custom trigger will be hidden from screen
-readers, so the file input remains 100% accessible.
+And don't worry, that custom trigger is a form label, so the file input remains
+100% accessible.
 
 
 ## EmberX
