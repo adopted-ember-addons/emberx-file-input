@@ -1,13 +1,9 @@
-.custom-container {
-  width: 70%;
-}
-
-.custom {
+.custom-class label {
   background: green;
-  border: none;
+  padding: 10px;
   color: white;
-  font-size: 20px;
-  padding: 40px;
-  text-align: center;
-  border-radius: 6px;
+}
+.x-file--input:focus + label,
+.custom-class label:hover {
+  background-color: blue;
 }

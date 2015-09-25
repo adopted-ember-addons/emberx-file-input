@@ -1,7 +1,16 @@
 <h2 id="title">Welcome to emberx-file-input</h2>
 
-{{outlet}}
 
-{{#x-file-input class="custom-container" action="tryAnUpload" id="spec-file-input"}}
-  <button class="custom">Shall you upload?</button>
-{{/x-file-input}}
+<div style="margin-bottom: 10px;">
+  {{#x-file-input class="custom-class" action="tryAnUpload" id="spec-file-input"}}
+    <h3>Shall you upload?</h3>
+  {{/x-file-input}}
+</div>
+
+<div>
+  Non block:
+  {{x-file-input class="custom-class" alt="Upload Something!"
+    action="tryAnUpload" id="spec-file-input-blockless"}}
+</div>
+
+{{outlet}}

@@ -17,10 +17,11 @@ describe('Acceptance: XFileInput', function() {
   });
 
   beforeEach(function() {
-    visit('/');
-    return andThen(() => {
-      this.component = getComponentById('spec-file-input');
-    });
+    return visit('/');
+  });
+
+  beforeEach(function() {
+    this.component = getComponentById('spec-file-input');
   });
 
   it('renders', function() {
@@ -33,10 +34,6 @@ describe('Acceptance: XFileInput', function() {
 
   it('has 0 tab index', function() {
     expect(this.component.$('input[type=file]')).to.have.attr('tabindex', '0');
-  });
-
-  it('has aria-hidden around its content', function() {
-    expect(this.component.$('.spec-file-input__content')).to.have.attr('aria-hidden', 'true');
   });
 
   it('has contains its yielded content', function() {

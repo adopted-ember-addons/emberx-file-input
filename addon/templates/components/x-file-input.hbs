@@ -1,6 +1,10 @@
-{{#if hasBlock}}
-  <div class="spec-file-input__content" aria-hidden="true">
+{{input id=randomId type="file" class="x-file--input" name=name
+  disabled=disabled multiple=multiple tabindex=tabindex}}
+
+<label for="{{randomId}}">
+  {{#if hasBlock}}
     {{yield}}
-  </div>
-{{/if}}
-{{input type="file" class="x-file--input" name=name disabled=disabled multiple=multiple tabindex=tabindex}}
+  {{else}}
+    {{alt}}
+  {{/if}}
+</label>

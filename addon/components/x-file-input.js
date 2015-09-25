@@ -15,7 +15,11 @@ export default Ember.Component.extend({
    * @method
    * @param {$.Event} e Native change event
    */
-  change: function(e) {
+  change(e) {
     this.sendAction("action", e.target.files);
-  }
+  },
+
+  randomId: Ember.computed(function() {
+    return Math.random().toString(36).substring(7);
+  })
 });
