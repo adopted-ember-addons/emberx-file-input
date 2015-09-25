@@ -1,12 +1,6 @@
 /* jshint expr:true */
-import {
-  describe,
-  it
-} from 'mocha';
-import {
-  beforeEach,
-  afterEach
-} from '../test-helper';
+import { describe, it } from 'mocha';
+import { beforeEach, afterEach } from '../test-helper';
 import { expect } from 'chai';
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
@@ -24,9 +18,8 @@ describe('Acceptance: XFileInput', function() {
 
   beforeEach(function() {
     visit('/');
-    var self = this;
-    return andThen(function(){
-      self.component = getComponentById('spec-file-input');
+    return andThen(() => {
+      this.component = getComponentById('spec-file-input');
     });
   });
 

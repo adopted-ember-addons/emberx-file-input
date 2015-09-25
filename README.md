@@ -1,4 +1,5 @@
 # emberx-file-input
+[![Build Status](https://travis-ci.org/thefrontside/emberx-file-input.svg?branch=master)](https://travis-ci.org/thefrontside/emberx-file-input)
 
 I select files well. I select files very, very well.
 
