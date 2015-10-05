@@ -1,16 +1,26 @@
-<h2 id="title">Welcome to emberx-file-input</h2>
+<div class="demo-wrapper">
+  <h2 id="title">Basic Emberx-File-Input</h2>
 
+  <div style="margin-bottom: 10px;">
+    {{#x-file-input class="custom-class" action="uploadAPhoto" id="spec-file-input"}}
+      <h3>Shall you upload?</h3>
+    {{/x-file-input}}
+  </div>
 
-<div style="margin-bottom: 10px;">
-  {{#x-file-input class="custom-class" action="tryAnUpload" id="spec-file-input"}}
-    <h3>Shall you upload?</h3>
+  <div>
+    Non block:
+    {{x-file-input class="custom-class" alt="Upload Something!"
+      action="uploadAPhoto" id="spec-file-input-blockless"}}
+  </div>
+</div>
+
+<div class="demo-wrapper">
+  {{#x-file-input action="uploadAPhoto" id="spec-file-input-two"}}
+    {{#if photoName}}
+      <div style={{photoPreview}} class="demo-photo-preview"></div>
+      <div class="photo-name">{{photoName}}</div>
+    {{else}}
+      <div class="demo-camera-icon"><i class="fa fa-camera-retro"></i></div>
+    {{/if}}
   {{/x-file-input}}
 </div>
-
-<div>
-  Non block:
-  {{x-file-input class="custom-class" alt="Upload Something!"
-    action="tryAnUpload" id="spec-file-input-blockless"}}
-</div>
-
-{{outlet}}
