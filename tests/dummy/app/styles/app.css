@@ -11,7 +11,7 @@
 
 .x-file--input:focus + label,
 .custom-class label:hover {
-  /* background-color: #2C3E50; */
+  background-color: #2C3E50;
 }
 
 .demo-wrapper {
