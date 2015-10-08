@@ -37,7 +37,9 @@
   },
   "keywords": [
     "ember-addon",
-    "file input"
+    "file input",
+    "file selector",
+    "custom file input"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "0.7.4",
