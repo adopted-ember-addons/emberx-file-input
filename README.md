@@ -59,6 +59,53 @@ this:
 And don't worry, that custom trigger is a form label, so the file input remains
 100% accessible.
 
+## Customizing the CSS
+
+The whole point of this component is for you to customize your inputs with CSS
+and make them look *much* better than the native inputs. Lets look at a simple
+example.
+
+Here is our component. You can see we have a custom class applied to the block
+called `custom-class`. We are going to use that class to apply our styles.
+
+```hbs
+{{#x-file-input class="custom-class" action="uploadAPhoto"}}
+  <h3>Shall you upload?</h3>
+{{/x-file-input}}
+```
+
+In our CSS we want to target `.custom-class label` because the label is the
+element that we're making look nice.
+
+```css
+.custom-class label {
+  background: #34495e;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+```
+
+This css will make our button look a little something like this:
+![Custom file input styling](http://i.imgur.com/OHTMaAQ.png)
+
+We are not done yet! Since we're replicating a native input with
+HTML and CSS we have to make sure we replicate all of the "default"
+features we get when using a native file input. One of those things is a css
+`:hover` and `:focus` state. These are often overlooked but are critcal to add.
+In your CSS you need to add the following:
+
+```css
+.x-file--input:focus + label,
+.x-file--input + label:hover {
+  /* Apply your own hover state */
+  background-color: #2C3E50;
+}
+```
+
+And that's it! Your file input is now styled and decked to the nines!
+If you would like to see a real [life example checkout the demo page](http://thefrontside.github.io/emberx-file-input)
+
 
 ## EmberX
 
