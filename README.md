@@ -62,11 +62,11 @@ And don't worry, that custom trigger is a form label, so the file input remains
 ## Customizing the CSS
 
 The whole point of this component is for you to customize your inputs with CSS
-and make them look *much* better than the native inputs. Let's look at a simple
+and make them look *much* better than the native inputs. Lets look at a simple
 example.
 
-Here's our component. You can see we have a custom class applied to the block
-called `custom-class`. We're going to use that class to apply our styles.
+Here is our component. You can see we have a custom class applied to the block
+called `custom-class`. We are going to use that class to apply our styles.
 
 ```hbs
 {{#x-file-input class="custom-class" action="uploadAPhoto"}}
@@ -89,9 +89,9 @@ element that we're making look nice.
 This css will make our button look a little something like this:
 ![Custom file input styling](http://i.imgur.com/OHTMaAQ.png)
 
-We're not done yet! Since we're replicating a native input with
+We are not done yet! Since we're replicating a native input with
 HTML and CSS we have to make sure we replicate all of the "default"
-features we get when using a file input. One of those things is a css
+features we get when using a native file input. One of those things is a css
 `:hover` and `:focus` state. These are often overlooked but are critcal to add.
 In your CSS you need to add the following:
 
