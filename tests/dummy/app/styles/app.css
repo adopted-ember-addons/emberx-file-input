@@ -51,6 +51,14 @@
   margin-top: 12px;
 }
 
+.file-name {
+  padding: 8px;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+  color: #34495e;
+  margin-top: 12px;
+}
+
 .photo-name label:hover {
   border: 1px solid #34495e;
   color: #34495e;

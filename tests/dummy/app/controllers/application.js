@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  multiFiles: [],
   photoName: null,
   photoPreviewUrl: null,
   photoPreview: Ember.computed('photoPreviewUrl', function(){

@@ -1,20 +1,32 @@
-/* global FileReader */
+/* global FileReader, alert */
 import Ember from 'ember';
 
 export default Ember.Route.extend({
 
   actions: {
     uploadAPhoto(fileList) {
-      var controller = this.controllerFor('application');
-      controller.set('photoName', fileList[0].name);
+      let re = new RegExp('image/*');
 
-      let reader = new FileReader();
+      if(re.test(fileList[0].type)) {
+        let controller = this.controllerFor('application');
+        controller.set('photoName', fileList[0].name);
 
-      reader.onloadend = function() {
-        controller.set('photoPreviewUrl', reader.result);
-      };
+        let reader = new FileReader();
 
-      reader.readAsDataURL(fileList[0]);
+        reader.onloadend = function() {
+          controller.set('photoPreviewUrl', reader.result);
+        };
+
+        reader.readAsDataURL(fileList[0]);
+      } else {
+        alert(`File must be an image. You tried to upload: ${fileList[0].type}`);
+      }
+    },
+
+    uploadManyFiles(fileList) {
+      let controller = this.controllerFor('application');
+
+      controller.set('multiFiles', fileList);
     }
   }
 });
