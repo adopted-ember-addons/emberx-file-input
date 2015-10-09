@@ -24,3 +24,15 @@
     {{/if}}
   {{/x-file-input}}
 </div>
+
+<div class="demo-wrapper">
+  {{x-file-input action="uploadManyFiles" class="custom-class"
+    id="spec-file-input-three" multiple=true alt="Upload multiple"}}
+
+  {{#each multiFiles as |file|}}
+    <p class="file-name">
+      {{file-icon file.type}}
+      {{file.name}}
+    </p>
+  {{/each}}
+</div>
