@@ -3,6 +3,7 @@ import layout from '../templates/components/x-file-input';
 
 export default Ember.Component.extend({
   classNameBindings: [':x-file-input', 'disabled:x-file-input--disabled'],
+  attributeBindings: ['accept'],
   tagName: 'span',
   layout: layout,
   tabindex: 0,
