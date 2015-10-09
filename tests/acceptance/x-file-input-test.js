@@ -45,7 +45,8 @@ describe('Acceptance: XFileInput', function() {
       this.component.setProperties({
         disabled: true,
         multiple: true,
-        name: "taco-cat"
+        name: "taco-cat",
+        accept: "image/jpg"
       });
     });
 
@@ -63,6 +64,10 @@ describe('Acceptance: XFileInput', function() {
 
     it('binds the tabindex attribut on the native file input', function() {
       expect(this.component.$('input[type=file]')).to.have.attr('name', 'taco-cat');
+    });
+
+    it("binds the accept attribute on the native file input", function() {
+      expect(this.component.$('input[type=file]')).to.have.attr('accept', 'image/jpg');
     });
   });
 });
