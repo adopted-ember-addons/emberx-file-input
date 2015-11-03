@@ -2,6 +2,7 @@
 .x-file--input {
   width: 0px;
   height: 0px;
+  max-width: 0;
   opacity: 0;
   overflow: hidden;
   z-index: -1;
