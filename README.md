@@ -1,4 +1,6 @@
 # emberx-file-input
+[![npm version](https://badge.fury.io/js/emberx-file-input.svg)](https://badge.fury.io/js/emberx-file-input)
+[![Ember Observer Score](http://emberobserver.com/badges/emberx-file-input.svg)](http://emberobserver.com/addons/emberx-file-input)
 [![Build Status](https://travis-ci.org/thefrontside/emberx-file-input.svg?branch=master)](https://travis-ci.org/thefrontside/emberx-file-input)
 
 I select files well. I select files very, very well.
