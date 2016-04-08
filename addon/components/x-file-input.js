@@ -18,6 +18,9 @@ export default Ember.Component.extend({
    */
   change(e) {
     this.sendAction("action", e.target.files);
+    if (this.get('reset')) {
+      this.$().replaceWith(this.$().val('').clone(true));
+    }
   },
 
   randomId: Ember.computed(function() {
