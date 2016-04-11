@@ -7,7 +7,6 @@ export default Ember.Component.extend({
   tagName: 'span',
   layout: layout,
   tabindex: 0,
-  files:
 
   /**
    * Listens for change events on the native file input and dispatches
