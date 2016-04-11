@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   tagName: 'span',
   layout: layout,
   tabindex: 0,
+  files:
 
   /**
    * Listens for change events on the native file input and dispatches
@@ -18,7 +19,7 @@ export default Ember.Component.extend({
    */
   change(e) {
     this.sendAction("action", e.target.files);
-    if (this.get('reset')) {
+    if (this.get('resetInput')) {
       this.$().replaceWith(this.$().val('').clone(true));
     }
   },
