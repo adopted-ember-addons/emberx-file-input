@@ -17,9 +17,25 @@ export default Ember.Component.extend({
    * @param {$.Event} e Native change event
    */
   change(e) {
-    this.sendAction("action", e.target.files);
+    this.sendAction("action", e.target.files, this.resetInput.bind(this));
   },
 
+  /**
+   * Resets the value of the input so you can select the same file
+   * multiple times.
+   *
+   * @method
+   */
+  resetInput() {
+    this.$('.x-file--input').val('');
+  },
+
+  /**
+   * Generates a random ID to relate the label to the input.
+   *
+   * @method
+   * @private
+   */
   randomId: Ember.computed(function() {
     return Math.random().toString(36).substring(7);
   })
