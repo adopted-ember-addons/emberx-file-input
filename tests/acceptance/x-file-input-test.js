@@ -84,14 +84,25 @@ describe('Acceptance: XFileInput', function() {
      *
      */
     beforeEach(function() {
+      let _this = this;
       this.resetComponent = getComponentById('spec-file-input-reset');
       // Spy on the resetInput method
-      this.resetComponent.resetInput = sinon.spy();
+      this.resetContext = null;
+      // Warning, using a fat arrow function will not work. It will set
+      // `this.resetContext` to the mocha test runner contect every time.
+      this.resetComponent.resetInput = sinon.spy(function() {
+        _this.resetContext = this;
+      });
+
       this.resetComponent.$('.x-file--input').trigger('change');
     });
 
     it("calls the reset method", function() {
       expect(this.resetComponent.resetInput).to.have.been.called;
+    });
+
+    it("has the correct context sent", function() {
+      expect(this.resetContext).to.deep.equal(this.resetComponent);
     });
   });
 });
