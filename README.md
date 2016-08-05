@@ -112,9 +112,8 @@ If you would like to see a real
 
 ## Resetting the input
 
-If you would like to select the same file many times you need to call
-the `resetInput` method that's passed as an argument with the
-action. For example:
+To select the same file many times you need to call the `resetInput`
+method that's passed as an argument with the action. For example:
 
 ``` javascript
 actions: {
