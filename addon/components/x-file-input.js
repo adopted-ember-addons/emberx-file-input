@@ -17,7 +17,24 @@ export default Ember.Component.extend({
    * @param {$.Event} e Native change event
    */
   change(e) {
-    this.sendAction("action", e.target.files);
+    /**
+     * Allows user to use a closure action that returns a promise.
+     * This way, we don't reset the input until after the work
+     * in the initial action is complete.
+     */
+    let action = this.get('action');
+    if (typeof action === 'string' || action instanceof String) {
+      this.sendAction('action', e.target.files);
+    } else {
+      let promise = action(e.target.files);
+      if (promise && typeof promise.then === 'function') {
+        promise.then(() => {
+          if (this.get('resetInput')) {
+            this.$('.x-file--input').val('');
+          }
+        });
+      }
+    }
   },
 
   randomId: Ember.computed(function() {
