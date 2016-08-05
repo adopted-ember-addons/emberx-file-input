@@ -8,5 +8,11 @@ export default Ember.Controller.extend({
     let url = this.get('photoPreviewUrl');
 
     return Ember.String.htmlSafe(`background-image: url("${url}")`);
-  })
+  }),
+
+  actions: {
+    doSomething(files, reset) {
+      reset();
+    }
+  }
 });

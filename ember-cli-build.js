@@ -9,6 +9,7 @@ module.exports = function(defaults) {
 
   app.import('vendor/style.css');
   app.import('bower_components/chai-jquery/chai-jquery.js', {type: 'test'});
+  app.import('bower_components/sinon-chai/lib/sinon-chai.js', {type: 'test'});
   /*
     This build file specifies the options for the dummy test app of this
     addon, located in `/tests/dummy`
