@@ -17,7 +17,7 @@ export default Ember.Component.extend({
    * @param {$.Event} e Native change event
    */
   change(e) {
-    this.sendAction("action", e.target.files, this.resetInput);
+    this.sendAction("action", e.target.files, this.resetInput.bind(this));
   },
 
   /**
