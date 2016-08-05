@@ -35,14 +35,15 @@ invoked with an array of [File][1] objects.
 > Note: Whether the file input is for a single file or mulitple files,
 > it will always return an array of `File` objects upon selection.
 
-In its blockless form, it will render as a bare
-`input[type=file]`. Like this:
+In its blockless form, you will need to pass an `alt` attribute for
+the text you would like to be displayed inside the inputs label.
 
-<input type=file name="files" alt="Choose a File"/>
+``` handlebars
+{{x-file-input alt="hello world"}}
+```
 
-
-But that's kinda ugly! For beautiful file inputs, pass a block. This
-HTML will be used as the trigger of the file input.
+When passing a block, the HTML inside the block will be used as the
+trigger of the file input.
 
 ```hbs
 {{#x-file-input multiple=true action=(action "didSelectFiles")}}
@@ -106,7 +107,25 @@ In your CSS you need to add the following:
 ```
 
 And that's it! Your file input is now styled and decked to the nines!
-If you would like to see a real [life example checkout the demo page](http://thefrontside.github.io/emberx-file-input)
+If you would like to see a real
+[life example checkout the demo page](http://thefrontside.github.io/emberx-file-input)
+
+## Resetting the input
+
+To select the same file many times you need to call the `resetInput`
+method that's passed as an argument with the action. For example:
+
+``` javascript
+actions: {
+  myAction(files, resetInput) {
+    // Do something with your files.
+    // Once you're done, call the reset method:
+    resetInput();
+    // Now your input is reset!
+  }
+}
+```
+
 
 
 ## EmberX
