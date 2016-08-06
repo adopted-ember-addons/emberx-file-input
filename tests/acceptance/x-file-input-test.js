@@ -41,6 +41,18 @@ describe('Acceptance: XFileInput', function() {
     expect(this.component.$('.spec-file-input__content :contains("Shall you upload?")')).not.to.be.empty;
   });
 
+  describe('With no block passed', function() {
+    beforeEach(function() {
+      this.blocklessComponent = getComponentById('spec-file-input-blockless');
+    });
+
+    it('should provide default alt text', function() {
+      expect(this.blocklessComponent.$().text().trim()).to.equal('Upload');
+    });
+
+  });
+
+
   describe('Bound Attributes', function() {
     beforeEach(function(){
       this.component.setProperties({

@@ -9,6 +9,14 @@ export default Ember.Component.extend({
   tabindex: 0,
 
   /**
+   * The text displayed when no block is passed.
+   *
+   * @property alt
+   * @default "Upload"
+   */
+  alt: "Upload",
+
+  /**
    * Listens for change events on the native file input and dispatches
    * the corresponding action up the context chain.
    *
