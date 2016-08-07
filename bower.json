@@ -1,11 +1,10 @@
 {
   "name": "emberx-file-input",
   "dependencies": {
-    "ember": "1.13.0",
     "ember-mocha": "~0.8.11",
     "chai-jquery": "~2.0.0",
+    "ember": "~2.7.0",
     "ember-cli-shims": "0.1.1",
-    "ember-cli-test-loader": "0.2.2",
     "sinon-chai": "~2.8.0"
   }
 }
