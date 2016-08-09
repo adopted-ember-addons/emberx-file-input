@@ -6,6 +6,13 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    app.import('vendor/style.css');
+    var appImport;
+    if (this && typeof this.import === 'function') {
+      appImport = this.import.bind(this);
+    } else {
+      appImport = app.import.bind(app);
+    }
+
+    appImport('vendor/style.css');
   }
 };
