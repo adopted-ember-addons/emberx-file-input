@@ -62,6 +62,17 @@ this:
 And don't worry, that custom trigger is a form label, so the file input remains
 100% accessible.
 
+### Configuring file formats with `accept`
+You can use the `accept` attribute to only allow specifc types of
+files. In this example we only allow `.png` & `.jpg` file types.
+
+```hbs
+{{#x-file-input multiple=true action=(action "didSelectFiles") accept="image/png,image/jpg"}}
+  <img src="http://i-should-buy-a-boat-cat.com" alt="I should buy a boat"/>
+{{/x-file-input}}
+```
+
+
 ## Customizing the CSS
 
 The whole point of this component is for you to customize your inputs with CSS
