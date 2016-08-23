@@ -1,7 +1,7 @@
 /* Hide the original input */
 .x-file--input {
-  width: 0px;
-  height: 0px;
+  width: 1px;
+  height: 0;
   max-width: 0;
   opacity: 0;
   overflow: hidden;
