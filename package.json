@@ -1,6 +1,6 @@
 {
   "name": "emberx-file-input",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny Ember component which does one thing and only: select files beautifully.",
   "directories": {
     "doc": "doc",
