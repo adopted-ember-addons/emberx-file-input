@@ -1,13 +1,18 @@
 # Change Log
 
-## [Unreleased](https://github.com/thefrontside/emberx-file-input/tree/HEAD)
-
-[Full Changelog](https://github.com/thefrontside/emberx-file-input/compare/v1.1.0...HEAD)
+## [v1.1.1](https://github.com/thefrontside/emberx-file-input/tree/v1.1.1) (2017-01-04)
+[Full Changelog](https://github.com/thefrontside/emberx-file-input/compare/v1.1.0...v1.1.1)
 
 **Closed issues:**
 
 - Publish New Release Soon? [\#42](https://github.com/thefrontside/emberx-file-input/issues/42)
 - Action Handler  [\#22](https://github.com/thefrontside/emberx-file-input/issues/22)
+
+**Merged pull requests:**
+
+- Use a plain \<input\> instead of {{input}} [\#48](https://github.com/thefrontside/emberx-file-input/pull/48) ([cibernox](https://github.com/cibernox))
+- Reinstall gh-pages addon [\#46](https://github.com/thefrontside/emberx-file-input/pull/46) ([Robdel12](https://github.com/Robdel12))
+- Update changelog for 1.1.0 [\#45](https://github.com/thefrontside/emberx-file-input/pull/45) ([Robdel12](https://github.com/Robdel12))
 
 ## [v1.1.0](https://github.com/thefrontside/emberx-file-input/tree/v1.1.0) (2016-08-30)
 [Full Changelog](https://github.com/thefrontside/emberx-file-input/compare/v1.0.0...v1.1.0)
