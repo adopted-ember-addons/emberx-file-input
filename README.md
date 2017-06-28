@@ -137,7 +137,60 @@ actions: {
 }
 ```
 
+## Acceptance Testing
 
+You can use the `selectFile` async helper in acceptance tests to simulate file uploads.
+
+First import the helper in your `test-helper.js` (or respective file that requires test dependencies)
+
+```javascript
+import 'emberx-file-input/test-helpers/select-file-async'
+
+...
+
+```
+
+then in your test:
+
+```javascript
+visit('/');
+selectFile('.x-file-input', {name: 'test.txt', type: 'text/plain'});
+
+andThen(function() {
+
+...
+```
+
+or if the code you're testing needs the object to be an actual file
+
+```javascript
+visit('/');
+
+const file = new Blob(['test'], {type: 'image/jpeg'});
+selectFile('.x-file-input', file);
+
+andThen(function() {
+
+...
+```
+
+The first argument is the class of your x-file-input component. The second argument is an object in place of the file normally returned.
+
+## Unit Testing
+
+There is a separate `selectFile` helper that works in unit/component tests.
+
+```javascript
+import 'emberx-file-input/test-helpers/select-file-unit'
+```
+
+then in your test:
+
+```javascript
+selectFile('.x-file-input', {name: 'test.txt', type: 'text/plain'});
+
+assert.equal($('.something').length, 1, 'Element exists!');
+```
 
 ## EmberX
 

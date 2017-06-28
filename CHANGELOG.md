@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.1.2](https://github.com/thefrontside/emberx-file-input/tree/v1.1.2) (2017-03-17)
+[Full Changelog](https://github.com/thefrontside/emberx-file-input/compare/v1.1.1...v1.1.2)
+
+**Merged pull requests:**
+
+- The white space causes some visual inconsistency [\#50](https://github.com/thefrontside/emberx-file-input/pull/50) ([treelite](https://github.com/treelite))
+
 ## [v1.1.1](https://github.com/thefrontside/emberx-file-input/tree/v1.1.1) (2017-01-04)
 [Full Changelog](https://github.com/thefrontside/emberx-file-input/compare/v1.1.0...v1.1.1)
 

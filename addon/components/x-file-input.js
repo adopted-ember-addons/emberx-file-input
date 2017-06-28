@@ -25,7 +25,7 @@ export default Ember.Component.extend({
    * @param {$.Event} e Native change event
    */
   change(e) {
-    this.sendAction("action", e.target.files, this.resetInput.bind(this));
+    this.sendAction("action", this.files(e), this.resetInput.bind(this));
   },
 
   /**
@@ -46,5 +46,24 @@ export default Ember.Component.extend({
    */
   randomId: Ember.computed(function() {
     return Math.random().toString(36).substring(7);
-  })
+  }),
+
+  /**
+   * Gets files from event object.
+   *
+   * @method
+   * @private
+   * @param {$.Event || Event}
+   */
+  files(e) {
+    if (e.target.files) {
+      return e.target.files;
+    } else if (e.testingFiles) {
+      return e.testingFiles;
+    } else {
+      // testingFiles will not exist on e
+      // when it is a JQuery.Event
+      return e.originalEvent.testingFiles;
+    }
+  }
 });
