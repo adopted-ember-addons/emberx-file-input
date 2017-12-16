@@ -1,6 +1,6 @@
 {
   "name": "emberx-file-input",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A tiny Ember component which does one thing and only: select files beautifully.",
   "keywords": [
     "ember-addon",
@@ -36,6 +36,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mocha": "^0.14.4",
+    "ember-cli-release": "^1.0.0-beta.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
