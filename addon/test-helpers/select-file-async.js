@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import { registerAsyncHelper } from '@ember/test';
 
-export default Ember.Test.registerAsyncHelper('selectFile', function(app, selector, file) {
+export default registerAsyncHelper('selectFile', function(app, selector, file) {
   return triggerEvent(
     selector,
     'change',

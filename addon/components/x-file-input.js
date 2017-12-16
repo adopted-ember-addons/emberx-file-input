@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 import layout from '../templates/components/x-file-input';
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNameBindings: [':x-file-input', 'disabled:x-file-input--disabled'],
   attributeBindings: ['accept'],
   tagName: 'span',
@@ -44,7 +45,7 @@ export default Ember.Component.extend({
    * @method
    * @private
    */
-  randomId: Ember.computed(function() {
+  randomId: computed(function() {
     return Math.random().toString(36).substring(7);
   }),
 

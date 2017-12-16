@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
+import { htmlSafe } from '@ember/string';
 
 export function fileIcon(params) {
   let iconClass = "fa fa-file-o";
@@ -11,7 +12,7 @@ export function fileIcon(params) {
     iconClass = "fa fa-file-pdf-o";
   }
 
-  return new  Ember.String.htmlSafe(`<i class="${iconClass}"></i>`);
+  return new  htmlSafe(`<i class="${iconClass}"></i>`);
 }
 
-export default Ember.Helper.helper(fileIcon);
+export default helper(fileIcon);
