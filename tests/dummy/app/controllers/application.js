@@ -1,13 +1,15 @@
-import Ember from 'ember';
+import { htmlSafe } from '@ember/string';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   multiFiles: [],
   photoName: null,
   photoPreviewUrl: null,
-  photoPreview: Ember.computed('photoPreviewUrl', function(){
+  photoPreview: computed('photoPreviewUrl', function(){
     let url = this.get('photoPreviewUrl');
 
-    return Ember.String.htmlSafe(`background-image: url("${url}")`);
+    return htmlSafe(`background-image: url("${url}")`);
   }),
 
   actions: {
