@@ -10,6 +10,14 @@ export default Component.extend({
   tabindex: 0,
 
   /**
+   * The class given to the label.
+   *
+   * @property labelClassName
+   * @default null
+   */
+  labelClassName: null,
+
+  /**
    * The text displayed when no block is passed.
    *
    * @property alt
@@ -47,6 +55,17 @@ export default Component.extend({
    */
   randomId: computed(function() {
     return Math.random().toString(36).substring(7);
+  }),
+
+  /**
+   * Allow additiobnal classnames to be passed to the input.
+   *
+   * @computedProperty
+   * @private
+   */
+  inputClassNames: computed('inputClassName', function() {
+    const inputClassName = this.get('inputClassName');
+    return inputClassName ? `x-file--input ${this.get('inputClassName')}` : 'x-file--input';
   }),
 
   /**

@@ -1,6 +1,6 @@
-<input type="file" id={{randomId}} class="x-file--input" name={{name}}
+<input type="file" id={{randomId}} class={{inputClassNames}} name={{name}}
   disabled={{disabled}} multiple={{multiple}} tabindex={{tabindex}} accept={{accept}}>
-<label for="{{randomId}}">
+<label for="{{randomId}}" class={{labelClassName}}>
   {{#if hasBlock}}
     {{yield}}
   {{else}}

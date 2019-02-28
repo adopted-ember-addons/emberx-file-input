@@ -39,6 +39,14 @@ describe('Acceptance: XFileInput', function() {
     expect(this.component.$()).to.have.class('x-file-input');
   });
 
+  it('has custom input class', function() {
+    expect(this.component.$('input[type=file]')).to.have.class('custom-input-class');
+  });
+
+  it('has custom label class', function() {
+    expect(this.component.$('label')).to.have.class('custom-label-class');
+  });
+
   it('has 0 tab index', function() {
     expect(this.component.$('input[type=file]')).to.have.attr('tabindex', '0');
   });
