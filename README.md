@@ -197,12 +197,19 @@ assert.equal($('.something').length, 1, 'Element exists!');
 emberx-file-input is part of the "missing components of ember" collectively
 known as emberx:
 
-* [emberx-select](https://github.com/thefrontside/emberx-select)
-* [emberx-slider](https://github.com/thefrontside/emberx-slider)
-* [emberx-file-input](https://github.com/thefrontside/emberx-file-input)
+* [emberx-select](https://github.com/adopted-ember-addons/emberx-select)
+* [emberx-file-input](https://github.com/adopted-ember-addons/emberx-file-input)
 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/File
+
+## Release Process
+
+Every commit to master is built on CircleCI and the demo url is built
+using github pages.
+
+Npm releases follow semver, and are ad-hoc and controlled by project
+owners.
 
 
 ## Code of Conduct

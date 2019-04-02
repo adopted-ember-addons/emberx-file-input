@@ -14,7 +14,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/thefrontside/emberx-file-input",
+  "repository": "https://github.com/adopted-ember-addons/emberx-file-input",
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
