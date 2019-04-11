@@ -2,7 +2,12 @@
   <h2 id="title">Basic Emberx-File-Input</h2>
 
   <div style="margin-bottom: 10px;">
-    {{#x-file-input class="custom-class" action="uploadAPhoto" id="spec-file-input"}}
+    {{#x-file-input class="custom-class" 
+      inputClassName="custom-input-class"
+      labelClassName="custom-label-class"
+      action="uploadAPhoto"
+      id="spec-file-input"
+    }}
       <h3>Shall you upload?</h3>
     {{/x-file-input}}
   </div>
