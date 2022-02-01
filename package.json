@@ -18,7 +18,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
     "chai-jquery": "^2.0.0",
@@ -26,6 +27,7 @@
     "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
+    "@embroider/test-setup": "^1.0.0",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.18.0",
@@ -45,7 +47,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-sinon": "^0.7.0",
-    "ember-source": "~3.8.1",
+    "ember-source": "~3.16.0",
     "ember-try": "^1.4.0",
     "loader.js": "^4.2.3"
   },
