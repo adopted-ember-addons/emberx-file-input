@@ -48,7 +48,7 @@
     "ember-resolver": "^4.0.0",
     "ember-sinon": "^0.7.0",
     "ember-source": "~3.16.0",
-    "ember-try": "^1.4.0",
+    "ember-try": "^2.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {
