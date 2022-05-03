@@ -3180,6 +3180,16 @@ babel-plugin-ember-template-compilation@^1.0.0:
     magic-string "^0.26.0"
     string.prototype.matchall "^4.0.5"
 
+babel-plugin-ember-template-compilation@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ember-template-compilation/-/babel-plugin-ember-template-compilation-1.0.2.tgz#e0695b8ad5a8fe6b2cbdff1eadb01cf402731ad6"
+  integrity sha512-4HBMksmlYsWEf/C/n3uW5rkBRbUp4FNaspzdQTAHgLbfCJnkLze8R6i6sUSge48y/Wne7mx+vcImI1o6rlUwXQ==
+  dependencies:
+    babel-import-util "^1.2.0"
+    line-column "^1.0.2"
+    magic-string "^0.26.0"
+    string.prototype.matchall "^4.0.5"
+
 babel-plugin-eval@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-eval/-/babel-plugin-eval-1.0.1.tgz#a2faed25ce6be69ade4bfec263f70169195950da"
@@ -4853,8 +4863,9 @@ center-align@^0.1.1:
     lazy-cache "^1.0.3"
 
 chai-jquery@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/chai-jquery/-/chai-jquery-2.0.0.tgz#0f43042308dd746332bd98164aaef4a4f45ba167"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/chai-jquery/-/chai-jquery-2.1.0.tgz#ce40fb5d853e7886688787f16d14cd9595388563"
+  integrity sha512-DiKSXcmInlt4d+WC5PkisDL5MsgJPd1lCSfZ3NgeSZJ34CJntEIpPOCdpalH2IhOWHeLpESJaiuHFxX1dpZ6bw==
 
 chai@^3.5.0:
   version "3.5.0"
