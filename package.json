@@ -36,7 +36,7 @@
   "devDependencies": {
     "@embroider/test-setup": "^1.0.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-ajax": "^3.0.0",
+    "ember-ajax": "^5.1.2",
     "ember-auto-import": "^2.4.1",
     "ember-cli": "~3.18.0",
     "ember-cli-chai": "^0.4.0",
