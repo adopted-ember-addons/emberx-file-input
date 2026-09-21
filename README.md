@@ -119,7 +119,7 @@ In your CSS you need to add the following:
 
 And that's it! Your file input is now styled and decked to the nines!
 If you would like to see a real
-[life example checkout the demo page](http://thefrontside.github.io/emberx-file-input)
+[life example checkout the demo page](https://adopted-ember-addons.github.io/emberx-file-input/)
 
 ## Resetting the input
 
